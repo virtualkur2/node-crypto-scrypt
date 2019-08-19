@@ -4,7 +4,10 @@
   "description": "A simple scrypt password hash module using Native Node Crypto Library",
   "main": "./src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "async": "node ./src/index.js myV3ryS3c5r3P4ssw0rd async",
+    "then": "node ./src/index.js myV3ryS3c5r3P4ssw0rd then",
+    "callback": "node ./src/index.js myV3ryS3c5r3P4ssw0rd callback"
   },
   "repository": {
     "type": "git",
