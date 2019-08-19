@@ -39,12 +39,16 @@ const printHash = (result) => {
   console.log(`El método usado es: ${method}`);
   console.log(`El password introducido es: ${password}`);
   console.log(`El hash generado es: ${result}`);
+  const end_time = new Date(Date.now()).getTime();
+  console.log(`El tiempo empleado fue: ${(end_time - start_time) / 1000} segundos`);
 }
 
 const printError = (error) => {
   console.log(`Hubo un error al procesar la solicitud:`);
   console.log(error.message);
 }
+
+const start_time = new Date(Date.now()).getTime();
 
 switch (method) {
   case 'async':
