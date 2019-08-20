@@ -1,7 +1,7 @@
 const hashHelper = require('./helpers/hash.helper');
 
-const password = process.argv[2] ? process.argv[2] : 'myV3ryS3c5r3P4ssw0rd';
-const method = process.argv[3] ? process.argv[3].toLowerCase() : 'async';
+const password = process.argv[2] || 'myV3ryS3c5r3P4ssw0rd';
+const method = process.argv[3].toLowerCase() || 'async';
 
 //Using async:
 const usingAsync = async (pass) => {
