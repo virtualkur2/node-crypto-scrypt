@@ -14,7 +14,7 @@ const typeError = new TypeError('Invalid argument');
 
 const helper = {
   isPasswordCorrect: (passwordAttempt, hashedPassword, cb) => {
-    if(!passwordAttempt || !hashedPassword || passwordAttempt === '' || hashedPassword === '') {
+    if(!passwordAttempt || !hashedPassword) {
       if(!cb) {
         return Promise.reject(typeError);
       }
@@ -51,7 +51,7 @@ const helper = {
     }
   },
   hashPassword: (password, cb) => {
-    if(!password || password === '') {
+    if(!password) {
       if(!cb) {
         return Promise.reject(typeError);
       }
@@ -92,7 +92,7 @@ const constructPassword = (hash, salt) => {
   // source: https://github.com/P-H-C/phc-string-format/blob/master/phc-sf-spec.md
   // example of format:
   // $scrypt$N=<value>$r=<value>$p=<value>$mem=<value>$salt$hash
-  
+
   let str = '$scrypt$'
   str = str.concat(keyLength).concat('$');
   str = str.concat(options.cost).concat('$');
